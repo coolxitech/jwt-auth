@@ -1,6 +1,6 @@
 {
-    "name": "thans/tp-jwt-auth",
-    "description": "thinkphp  jwt auth composer",
+    "name": "kuxitech/tp-jwt-auth",
+    "description": "thinkphp jwt auth composer,fix package version error",
     "type": "library",
     "require": {
         "php": "^7.0 || ^8.0",
@@ -12,6 +12,10 @@
         {
             "name": "Thans",
             "email": "360641274@qq.com"
+        },
+        {
+            "name": "Kuxi Tech",
+            "email": "admin@kuxi.tech"
         }
     ],
     "autoload": {
