@@ -50,8 +50,8 @@ class JWT
                 'password' => $this->config['password'],
             ];
         Container::getInstance()->make('thans\jwt\provider\JWT\Lcobucci', [
-            new Builder(),
-            new Parser(),
+            Builder::class,
+            Parser::class,
             $this->config['algo'],
             $keys,
         ]);
