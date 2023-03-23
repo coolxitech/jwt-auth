@@ -7,6 +7,8 @@ use thans\jwt\facade\JWTAuth;
 use thans\jwt\parser\AuthHeader;
 use thans\jwt\parser\Cookie;
 use thans\jwt\parser\Param;
+use thans\jwt\provider\interface\CustomBuilder;
+use thans\jwt\provider\interface\CustomParser;
 use think\App;
 use think\Container;
 use think\facade\Config;
@@ -50,8 +52,8 @@ class JWT
                 'password' => $this->config['password'],
             ];
         Container::getInstance()->make('thans\jwt\provider\JWT\Lcobucci', [
-            Builder::class,
-            Parser::class,
+            new CustomBuilder(),
+            new CustomParser(),
             $this->config['algo'],
             $keys,
         ]);
